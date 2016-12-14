@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+<timestamp key ="byDay" datePattern="yyyyMMdd'T'HHmmss"/>
+<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+<encodee>
+<pattern>%d{HH:MM:ss.sss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+</encodee>
+</appender>
+<appender name = "FILE" class ="ch.qos.logback.core.FileAppender">
+<file>C:\Users\SURE KUMAR\Desktop\New folder\eclipse\workspace\shoppingcartlogs\log1.txt</file>
+<encoder>
+<pattern>%-4relative [%thread] %-5level %logger{35} -%msg%n</pattern>
+</encoder>
+</appender>
+<root level="debug">
+<appender-ref ref="FILE"/>
+<appender-ref ref="STDOUT"/>
+</root>
+
+</configuration>
